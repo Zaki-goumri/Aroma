@@ -8,7 +8,7 @@ const Entremet = () => {
       <p className="max-w-xs md:leading-normal leading-6 ">Lorem ipsum dolor sit amet consectetur. Dictum et at posuere dolor lacus sed urna nisl. Fermentum et purus lectus nisi gravida morbi vitae condimentum ullamcorper. Justo diam duis in ullamcorper aliquam fringilla et sed semper. Sapien magna sodales nibh sapien viverra neque gravida risus.</p>
       <button className="bg-stone-300 text-aroma rounded-[50px] w-44 h-16 font-bold mt-6 ">Contactez-nous</button>
       </aside>
-    <img src="/patisserie/entremet2.png" alt="entremet" height={400} width={420} className="mb-4" />
+    <img src="/patisserie/entremet2.png" alt="entremet" height={400} width={420} className="mb-4 sm:px-4 px-6" />
   </div >
   );
 }

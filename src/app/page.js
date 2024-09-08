@@ -23,7 +23,7 @@ export default function Home() {
       </aside>
     </div >
     <div className="bg-aroma w-screen overflow-hidden mt-5  flex flex-col content-center"> 
-      <Image  src="/assets/bg.svg" alt="background" className="w-fit relative md:top-[-20vh] sm:top-[-10vh]  " width={200} height={40} />
+      <Image  src="/assets/bg.svg" alt="background" className="w-fit relative sm:top-[-100px] top-[-50px]   " width={200} height={40} />
       <BestSellers />
       <Entremet />
       
