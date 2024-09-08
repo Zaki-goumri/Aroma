@@ -14,7 +14,7 @@ const BestSellers = ()  => {
   
     return (
        <main className=" flex flex-col items-center gap-5 ">
-         <h1 className="md:text-4xl text-black font-bold text-2xl mt-3 ">Check Out Our <span className="text-white"> Best Sellers </span></h1>
+         <h1 className="md:text-4xl text-black font-bold text-2xl mt-1 ">Check Out Our <span className="text-white"> Best Sellers </span></h1>
     <ul className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-20 ">
     {
        
