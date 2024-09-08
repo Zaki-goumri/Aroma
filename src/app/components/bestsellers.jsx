@@ -14,8 +14,8 @@ const BestSellers = ()  => {
   
     return (
        <main className=" flex flex-col items-center gap-5 ">
-         <h1 className="md:text-4xl text-black font-bold text-2xl mt-1 ">Check Out Our <span className="text-white"> Best Sellers </span></h1>
-    <ul className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-20 ">
+         <h1 className="md:text-4xl text-black font-bold text-2xl mt-2  ">Check Out Our <span className="text-white"> Best Sellers </span></h1>
+    <ul className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-20  sm:gap-10  xxs:gap-8 gap-1">
     {
        
        bestSellers.map((bestSeller, index) => {

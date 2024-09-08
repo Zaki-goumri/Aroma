@@ -16,12 +16,12 @@ const Header = () => {
 //        
 
     return (
-        <main className="w-screen  flex justify-between lg:px-[93px] md:px-8 py-[32px] px-10">
+        <main className="w-screen  flex justify-between lg:px-[93px] md:px-8 py-[32px] sm:px-10 xs:px-4 px-2">
           <Link className="flex items-center gap-[9px]" href="/">           
              <Image src="/assets/logo.svg" height={46} width={47} alt="aroma logo" />
                 <h1 className="font-bold text-xl text-aroma">Aroma Cake </h1>
           </Link>
-          <ul className={`md:flex items-center lg:gap-10 md:gap-5 text-lg font-medium  md:visiblem hidden`}>
+          <ul className={`md:flex items-center lg:gap-10 md:gap-5 text-lg font-medium  md:visible hidden`}>
               
                 <li>
                     <a href="/a_propos_nous">À propos de nous</a>
@@ -33,7 +33,7 @@ const Header = () => {
                     <a  href="tel:0673629225">Contactez-nous</a>
                 </li>
             </ul>
-           <button onClick={toggleActiveClass} className="md:hidden">
+           <button onClick={toggleActiveClass} className="md:hidden ">
           {isActive ? (
            <Image src="/assets/hambrgerClose.svg" height={40} width={40} alt="menu is close"/>
           ) : (
