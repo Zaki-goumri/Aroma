@@ -16,7 +16,7 @@ const Header = () => {
 //        
 
     return (
-        <main className="w-screen  flex justify-between lg:px-[93px] md:px-8 py-[32px] sm:px-10 xs:px-4 px-2">
+        <main className="w-screen  flex justify-between lg:px-[93px] md:px-8 py-[32px] sm:px-10 xs:px-6 px-4">
           <Link className="flex items-center gap-[9px]" href="/">           
              <Image src="/assets/logo.svg" height={46} width={47} alt="aroma logo" />
                 <h1 className="font-bold text-xl text-aroma">Aroma Cake </h1>
