@@ -15,7 +15,7 @@ export default function Home() {
     <main className="flex flex-col items-center ">
     <Header />
     <div className="flex md:justify-around  md:gap-10 md:flex-row items-center md:mx-[100px] my-10 flex-col gap-4">
-      <img src="/patisserie/entremet.png" alt="entremet" height={400} width={420} className="mb-4" />
+      <img src="/patisserie/entremet.png" alt="entremet" height={400} width={420} className="mb-4 md:px-0 px-20" />
       <aside className="flex flex-col items-start gap-7">
         <h1 className="font-bold  text-2xl md:text-4xl max-w-sm text-aroma mb-3">Deliver You A Blissful Dessert in Every Bite</h1>
         <p className="max-w-xs md:leading-normal leading-6 ">Lorem ipsum dolor sit amet consectetur. Dictum et at posuere dolor lacus sed urna nisl. Fermentum et purus lectus nisi gravida morbi vitae condimentum ullamcorper. Justo diam duis in ullamcorper aliquam fringilla et sed semper. Sapien magna sodales nibh sapien viverra neque gravida risus.</p>
@@ -23,7 +23,7 @@ export default function Home() {
       </aside>
     </div >
     <div className="bg-aroma w-screen overflow-hidden mt-5  flex flex-col content-center"> 
-      <Image  src="/assets/bg.svg" alt="background" className="w-fit relative md:top-[-20vh] top-[-10vh] " width={200} height={40} />
+      <Image  src="/assets/bg.svg" alt="background" className="w-fit relative md:top-[-20vh] sm:top-[-10vh] top-[-5vh] " width={200} height={40} />
       <BestSellers />
       <Entremet />
       
