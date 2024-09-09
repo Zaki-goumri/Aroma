@@ -67,8 +67,8 @@ export default function Page() {
                  </div>
                 </aside>
                
-                <aside className="bg-aroma lg:w-3/4 w-screen min-h- " >
-                <div className={`md:hidden ${isActive ? "block top-50" : "hidden"}  w-screen  bg-white `}>
+                <aside className="bg-aroma lg:w-3/4 w-screen  " >
+                <div className={`md:hidden ${isActive ? "block top-50" : "hidden"}  w-screen  bg-white mb-10 `}>
                         <ul className="flex flex-col items-center gap-5 pt-10 h-max">
                         <button className="font-semibold text-lg hover:text-gray-400" onClick={() => handleButton('All')}>All</button>
 
