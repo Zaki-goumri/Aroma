@@ -1,5 +1,5 @@
 
-
+import Link from "next/link";
 
 const BestSellers = ()  => {
   
@@ -27,7 +27,7 @@ const BestSellers = ()  => {
             )
 })}
     </ul>
-        <button className="bg-stone-300 text-aroma rounded-[50px] w-44 h-16 font-bold mt-6 ">Voir plus</button>
+        <Link className="bg-white text-aroma rounded-[50px] w-44 h-16 font-bold mt-6 pt-5 text-center"href="/produits"> Voir plus</Link>
         </main>
     );
     }

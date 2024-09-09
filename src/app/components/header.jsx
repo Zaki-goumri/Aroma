@@ -27,15 +27,15 @@ const Header = () => {
                     <a href="/a_propos_nous">À propos de nous</a>
                 </li>
                 <li>
-                    <a href="#">Nos produits</a>
+                    <a href="/produits">Nos produits</a>
                 </li>
                 <li>
-                    <a  href="tel:0673629225">Contactez-nous</a>
+                    <a  href="tel:0560313217">Contactez-nous</a>
                 </li>
             </ul>
            <button onClick={toggleActiveClass} className="md:hidden ">
           {isActive ? (
-           <Image src="/assets/hambrgerClose.svg" height={40} width={40} alt="menu is close"/>
+           <Image src="/assets/closeHeader.svg" height={40} width={40} alt="menu is close"/>
           ) : (
             <Image src="/assets/menu.svg" height={40} width={40} alt="menu is open"/>)
           }
@@ -49,7 +49,7 @@ const Header = () => {
                     </li>
                     <hr className="w-3/4"/>
                     <li>
-                        <a href="#" onClick={removeActive} className="font-medium">Nos produits</a>
+                        <a href="/produits" onClick={removeActive} className="font-medium">Nos produits</a>
                     </li>
                     <hr className="w-3/4"/>
                     <li>

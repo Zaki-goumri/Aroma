@@ -8,8 +8,8 @@ module.exports = {
   theme: {
      screens: {
           'xxs': '320px',
-          'xs': '475px',
-          'sm': '640px',
+          'xs': '375px',
+          'sm': '425px',
           'md': '768px',
           'lg': '1024px',
           'xl': '1280px',
@@ -25,6 +25,7 @@ module.exports = {
       backgroundImage: {
         "bg": "url('/assets/bg.svg')",
         "merengue": "url('/patisserie/merengue.png')",
+        "macarons": "url('/patisserie/macarons.png')",
         },
        
     },
