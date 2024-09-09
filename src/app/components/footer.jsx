@@ -7,25 +7,25 @@ const Footer = () => {
             <h1 className="text-3xl font-bold ml-0"><span>&#8226; </span>Visitez-nous</h1>
         <span className="flex gap-2">
             <img src="/assets/location.svg" alt="lacation" />
-            <p> 123 rue de la paix, Paris</p>
+            <p> Residence Ysrf ,coopérative, Boumerdes</p>
         </span>
         <span className="flex gap-2">
             <img src="/assets/phone.svg" alt="phone number" />
                 
-            <p> 01 23 45 67 89</p>
+            <p> 05 60 31 32 17</p>
             </span>
         </div>
         <div className=" flex gap-4 md:justify-center items-end justify-start">
         <div className="flex gap-4 md:justify-center items-center justify-start">
             <p className="font-semibold">suivez-nous</p>
             <aside className="flex gap-4 md:justify-center items-center justify-start">
-           <Link href="https://www.facebook.com/" className="flex">
+           <Link href="https://web.facebook.com/patisserie.aroma.35?mibextid=zbwkwl&_rdc=1&_rdr" target="_blank" >
             <img src="/assets/facebook.svg" alt="facebook"  className="bg-aroma rounded-full w-[35px]  sm:w-[40px]   xs:w-[37px] md:w-[45px]" />
            </Link>
-            <Link href="https://www.instagram.com/">
+            <Link href="https://www.instagram.com/patisserie_aroma" target="_blank">
             <img src="/assets/insta.svg" alt="instagram"  className="bg-aroma rounded-full w-[35px]   sm:w-[40px] xs:w-[37px] md:w-[45px] " />
            </Link>
-           <Link href="https://www.tiktok.com/">
+           <Link href="https://www.tiktok.com/@patisserie_aroma" target="_blank">
             <img src="/assets/tiktok.svg" alt="tiktok"  className="bg-aroma rounded-full w-[35px]  sm:w-[40px]  xs:w-[37px] md:w-[45px]" />
               </Link>
               </aside>
