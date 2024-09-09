@@ -45,7 +45,7 @@ export default function Page() {
                   
                     <button onClick={toggleActiveClass} className="">
                     {isActive ? (
-                       <img src="/assets/hambrgerClose.svg" className="w-7 h-7 "alt="menu is close"/>
+                       <img src="/assets/hambrgerClose.svg" className="w-8 h-8 "alt="menu is close"/>
                         ) : (
                       <img src="/assets/arrowbottom.svg" alt="arrow" className="w-4 h-4" />
                          )}
