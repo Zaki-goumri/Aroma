@@ -45,7 +45,7 @@ export default function Page() {
                   
                     <button onClick={toggleActiveClass} className="">
                     {isActive ? (
-                       <img src="/assets/hambrgerClose.svg" className="w-7 h-7 "alt="menu is close"/>
+                       <img src="/assets/hambrgerClose.svg" className="w-8 h-8 "alt="menu is close"/>
                         ) : (
                       <img src="/assets/arrowbottom.svg" alt="arrow" className="w-4 h-4" />
                          )}
@@ -68,7 +68,7 @@ export default function Page() {
                 </aside>
                
                 <aside className="bg-aroma lg:w-3/4 w-screen  " >
-                <div className={`md:hidden ${isActive ? "block top-50" : "hidden"}  w-screen  bg-white mb-10 `}>
+                <div className={`md:hidden ${isActive ? "block top-50" : "hidden"}  w-screen  bg-white pb-10 `}>
                         <ul className="flex flex-col items-center gap-5 pt-10 h-max">
                         <button className="font-semibold text-lg hover:text-gray-400" onClick={() => handleButton('All')}>All</button>
 
