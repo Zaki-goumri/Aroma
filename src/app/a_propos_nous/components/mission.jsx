@@ -9,7 +9,7 @@ const Mission = () => {
             <h1 className='text-aroma text-4xl font-bold md:mt-0 mt-3'>Notre mission</h1>
             <p className='md:max-w-[40vw] max-w-96 font-medium'>Chez Aroma, nous croyons que chaque occasion mérite d&#39;être célébrée avec un dessert délicieux et unique. Nous mettons tout notre savoir-faire et notre créativité à votre service pour vous offrir des moments gourmands inoubliables.
 
-Notre mission est de vous faire découvrir le plaisir d'une pâtisserie authentique et de partager avec vous notre amour pour les saveurs et les produits frais.
+Notre mission est de vous faire découvrir le plaisir d&#39;une pâtisserie authentique et de partager avec vous notre amour pour les saveurs et les produits frais.
 
 </p>
         </aside>
