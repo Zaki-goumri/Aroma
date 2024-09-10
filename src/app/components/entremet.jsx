@@ -9,9 +9,9 @@ const Entremet = () => {
     <div>
       <p className=" lg:leading-normal leading-6  max-w-screen-xs font-medium">Chez Aroma, nous aimons vous faire plaisir !<br/>
 
-Vous avez une envie particulière ? Un gâteau d'anniversaire original ?<br/> Un dessert pour une occasion spéciale ? Une envie de saveurs uniques ?
+Vous avez une envie particulière ? Un gâteau d&#39;anniversaire original ?<br/> Un dessert pour une occasion spéciale ? Une envie de saveurs uniques ?
 
-N'hésitez pas à nous contacter pour vos commandes spéciales !
+N&#39;hésitez pas à nous contacter pour vos commandes spéciales !
 
 Nous pouvons réaliser :<br/>
 </p>
