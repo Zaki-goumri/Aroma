@@ -13,6 +13,7 @@ export const listeProduits = [
 export const viennoiseries = [
     {path: '/patisserie/cookies noir.png', name: 'cookies aux chocolat'},
     {path: '/patisserie/cookies.png', name: 'cookies aux raisin'},
+    
 ];
 
 export const entremets = [
