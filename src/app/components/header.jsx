@@ -23,6 +23,9 @@ const Header = () => {
           </Link>
           <ul className={`md:flex items-center lg:gap-10 md:gap-5 text-lg font-medium  md:visible hidden`}>
               
+          <li>
+                    <a href="/"> Acceuil </a>
+                </li>
                 <li>
                     <a href="/a_propos_nous">À propos de nous</a>
                 </li>
@@ -44,6 +47,10 @@ const Header = () => {
             </button>
             <div className={`md:hidden ${isActive ? "block" : "hidden"} absolute top-20 left-0 w-full h-full bg-white z-50`}>
                 <ul className="flex flex-col items-center gap-5 pt-20">
+                <li>
+                        <a href="/" onClick={removeActive} className="font-medium">Acceuil</a>
+                    </li>
+                    <hr className="w-3/4"/>
                     <li>
                         <a href="/a_propos_nous" onClick={removeActive} className="font-medium">À propos de nous</a>
                     </li>
