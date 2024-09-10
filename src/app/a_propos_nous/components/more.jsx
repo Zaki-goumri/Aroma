@@ -1,6 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 
+
+
+
 const More = () => {
     return (
         <div className="bg-merengue md:w-screen w-screen h-80 bg-cover bg-center flex justify-center items-center flex-col mt-20 gap-10">
