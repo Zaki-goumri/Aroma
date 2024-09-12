@@ -1,7 +1,7 @@
 'use client'
-
+import { easeIn, motion } from "framer-motion";
 import Header from "../components/header";
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "../components/footer";
 import { listeProduits } from "./components/constantes";
 import Viennoiseries from "./components/viennoiseries";
@@ -10,7 +10,33 @@ import Entremets from "./components/entremts";
 import { useState } from "react";
 
 export default function Page() {
+   const buttonVar={
+    hidden:{
+      x:"-5vw",
+      opacity:0
+    },
+  visible:(index)=>(
+      {
+        x:0,
+        transition:{
 
+        delay:index*0.175,
+        type:"spring",
+        ease:easeIn,
+        },
+        opacity:1,
+      }
+  )
+  }
+  const categoriesVar={
+    hidden:{
+      opacity:0,
+    },
+    visible:{
+      opacity:1,
+      duration:0.5
+    }
+  }
     const [selectedContent, setSelectedContent] = useState('toutes les categories'); // Initially no content is selected  
 
     const handleButtonClick = (content) => {  
@@ -32,7 +58,6 @@ export default function Page() {
 
     return (
         <main className="flex flex-col">
-            <Header />
             <div className="bg-macarons w-screen h-56 sm:bg-center bg-left bg-cover flex justify-center items-center ">
                 <h1 className=" text-aroma font-bold text-center  text-xl xs:text-2xl sm:text-3xl md:text-4xl  2xl:text-6xl">Découvrez nos produits en ligne</h1>
             </div>
@@ -58,10 +83,10 @@ export default function Page() {
 
 
                 <div className="lg:flex lg:flex-col lg:justify-start lg:items-center lg:mt-8 lg:gap-12 lg:w-fit  items-center lg:visible hidden ">
-                    <button className="font-semibold text-lg hover:text-gray-400 " onClick={() => handleButtonClick('All')}>toutes les categories</button>
+                    <button className="font-semibold text-lg hover:text-gray-400 " onClick={() => handleButtonClick('toutes les categories')}>toutes les categories</button>
                     {
                         listeProduits.map((produit, index) => (
-                            <button key={index} className="font-semibold text-lg hover:text-gray-400" onClick={() => handleButtonClick(produit)}>{produit}</button>
+                            <motion.button whileTap={{scale:0.85}} custom={index} variants={buttonVar} initial="hidden" animate="visible" key={index} className="font-semibold text-lg hover:text-gray-400" onClick={() => handleButtonClick(produit)}>{produit}</motion.button>
                         ))
                     }
                  </div>
@@ -70,7 +95,7 @@ export default function Page() {
                 <aside className="bg-aroma lg:w-3/4 w-screen  " >
                 <div className={`md:hidden ${isActive ? "block top-50" : "hidden"}  w-screen  bg-white pb-10 `}>
                         <ul className="flex flex-col items-center gap-5 pt-10 h-max">
-                        <button className="font-semibold text-lg hover:text-gray-400" onClick={() => handleButton('All')}>toutes les categories</button>
+                        <button className="font-semibold text-lg hover:text-gray-400" onClick={() => handleButton('toutes les categories')}>toutes les categories</button>
 
     
                 {
@@ -84,19 +109,19 @@ export default function Page() {
                     }
                 </ul>
             </div>
-                    {selectedContent === 'toutes les categories' &&
-                        <div>
-                            <Viennoiseries />
-                            <Salés />
-                            <Entremets />
-                            
-                        </div>
-                    }
+          <motion.div variants={categoriesVar} initial="hidden" animate="visible"> {selectedContent === 'toutes les categories' &&
+            <div >
+              <Viennoiseries />
+              <Salés />
+              <Entremets />
 
-                    {selectedContent === 'viennoiseries' && <Viennoiseries />}
-                    {selectedContent === 'salés' && <Salés />}
-                    {selectedContent === 'entremets' && <Entremets />}
-                </aside>
+            </div>
+          }
+
+            {selectedContent === 'viennoiseries' && <Viennoiseries />}
+            {selectedContent === 'salés' && <Salés />}
+            {selectedContent === 'entremets' && <Entremets />}
+          </motion.div>                </aside>
             </div>
             <Footer />
         </main>

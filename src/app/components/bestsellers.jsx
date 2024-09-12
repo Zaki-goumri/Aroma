@@ -1,6 +1,6 @@
-
+"use client"
 import Link from "next/link";
-
+import { delay, motion } from "framer-motion";
 const BestSellers = ()  => {
   
    const  bestSellers = [
@@ -11,6 +11,20 @@ const BestSellers = ()  => {
         {path: '/patisserie/cupCakes.png', title: 'cup cakes'},
         {path: '/patisserie/mousse.png', title: 'mousse fraise'}
     ]
+  const itemVariant={
+    hidden:{
+      opacity:0,
+      y:20
+    },
+  visible:(index)=>({
+    transition:{
+      delay:index*0.3,
+      type:"spring"
+    },
+      y:0,
+      opacity:1
+  })
+  }
   
     return (
        <main className=" flex flex-col items-center gap-5 ">
@@ -20,10 +34,10 @@ const BestSellers = ()  => {
        
        bestSellers.map((bestSeller, index) => {
             return (
-                <li key={index} className="flex flex-col items-center gap-4">
+                <motion.li variants={itemVariant}  initial="hidden" whileInView="visible" viewport={{once:true}} custom={index} key={index} className="flex flex-col items-center gap-4">
                     <img src={bestSeller.path} alt={bestSeller.title} className="w-40 h-40 rounded-full" />
                     <h2 className="text-white font-bold text-2xl">{bestSeller.title}</h2>
-                </li>
+                </motion.li>
             )
 })}
     </ul>

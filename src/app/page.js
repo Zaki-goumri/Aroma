@@ -5,16 +5,29 @@ import Footer from "./components/footer";
 import BestSellers from "./components/bestsellers";
 import Entremet from "./components/entremet";
 import Link from "next/link";
+import { easeIn,motion } from "framer-motion";
 
 export default function Home() {
   
  
- 
+ const heroVar={
+    hidden:{
+      opacity:0,
+      y:50
+    },
+    visible:{
+      transition:{
+        duration:0.5,
+        ease:easeIn
+      },
+      opacity:1,
+      y:0
+    }
+  } 
  
   return (
     <main className="flex flex-col items-center ">
-    <Header />
-    <div className="flex md:justify-around  md:gap-10 lg:flex-row items-center md:mx-[100px] my-10 flex-col gap-4 mb-0 ">
+    <motion.div variants={heroVar} initial="hidden" animate="visible"  className="flex md:justify-around  md:gap-10 lg:flex-row items-center md:mx-[100px] my-10 flex-col gap-4 mb-0 ">
       <img src="/patisserie/entremet.png" alt="entremet" height={400} width={420} className="mb-4 md:px-0 px-12" />
       <aside className="flex flex-col items-start gap-7 xs:pl-4 pl-6">
         <h1 className="font-bold  text-2xl md:text-4xl max-w-sm text-aroma mb-3   ">Aroma, une pâtisserie </h1>
@@ -25,7 +38,7 @@ export default function Home() {
        
 
       </aside>
-    </div >
+    </motion.div >
           
 
     <div className="bg-aroma w-screen overflow-hidden mt-0  flex flex-col content-center "> 

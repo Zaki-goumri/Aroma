@@ -2,8 +2,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from 'react'
-
+import { easeIn, motion } from "framer-motion";
 const Header = () => {
+    const navBarElement=[{name:"Acceuil ",href:"/"},{name:"À propos de nous",href:"/a_propos_nous"},{name:"Nos produits",href:"/produits"},{name:"Contactez-nous",href:"tel:0560313217"}]
+
     const [isActive, setIsActive] = useState(false);
     
     const toggleActiveClass = () => {
@@ -14,58 +16,61 @@ const Header = () => {
     
 
 //        
+ const navBarVar={
+    hidden:{
+      opacity:0,
+      y:-200,
+    },
+   visible:{
+  opacity:1,
+  y:0,
+  transition:{
+        
+        easing:easeIn,
+         type:"spring" 
+      }
 
+}
+  }
     return (
-        <main className="w-screen  flex justify-between lg:px-[93px] md:px-8 py-[32px] sm:px-10 xs:px-6 px-4">
-          <Link className="flex items-center gap-[9px]" href="/">           
-             <Image src="/assets/logo.svg" height={46} width={47} alt="aroma logo" />
-                <h1 className="font-bold text-xl text-aroma">Aroma Cake </h1>
-          </Link>
-          <ul className={`md:flex items-center lg:gap-10 md:gap-5 text-lg font-medium  md:visible hidden`}>
-              
-          <li>
-                    <a href="/"> Acceuil </a>
-                </li>
-                <li>
-                    <a href="/a_propos_nous">À propos de nous</a>
-                </li>
-                <li>
-                    <a href="/produits">Nos produits</a>
-                </li>
-                <li>
-                    <a  href="tel:0560313217">Contactez-nous</a>
-                </li>
-            </ul>
-           <button onClick={toggleActiveClass} className="md:hidden ">
-          {isActive ? (
-           <Image src="/assets/closeHeader.svg" height={40} width={40} alt="menu is close"/>
-          ) : (
+    <motion.div variants={navBarVar} initial="hidden" animate="visible">        <main className="w-screen  flex justify-between lg:px-[93px] md:px-8 py-[32px] sm:px-10 xs:px-6 px-4">
+      <Link className="flex items-center gap-[9px]" href="/">           
+        <Image src="/assets/logo.svg" height={46} width={47} alt="aroma logo" />
+        <h1 className="font-bold text-xl text-aroma">Aroma Cake </h1>
+      </Link>
+      <ul className={`md:flex items-center lg:gap-10 md:gap-5 text-lg font-medium  md:visible hidden`}>
+        {
+          navBarElement.map((elem,index)=>(
+            <li key={index} className="hover:scale-105">
+              <Link href={elem.href}>{elem.name} </Link>
+
+            </li>
+          ))
+        }
+              </ul>
+      <button onClick={toggleActiveClass} className="md:hidden ">
+        {isActive ? (
+          <Image src="/assets/closeHeader.svg" height={40} width={40} alt="menu is close"/>
+        ) : (
             <Image src="/assets/menu.svg" height={40} width={40} alt="menu is open"/>)
-          }
-          
-           
-            </button>
-            <div className={`md:hidden ${isActive ? "block" : "hidden"} absolute top-20 left-0 w-full h-full bg-white z-50`}>
-                <ul className="flex flex-col items-center gap-5 pt-20">
-                <li>
-                        <a href="/" onClick={removeActive} className="font-medium">Acceuil</a>
-                    </li>
+        }
+
+
+      </button>
+      <div className={`md:hidden ${isActive ? "block" : "hidden"} absolute top-20 left-0 w-full h-full bg-white z-50`}>
+        <ul className="flex flex-col items-center gap-5 pt-20">
+{
+          navBarElement.map((elem,index)=>(
+            <li key={index}>
+              <Link href={elem.href}> {elem.name}</Link>
+
+            </li>
+          ))
+        }
                     <hr className="w-3/4"/>
-                    <li>
-                        <a href="/a_propos_nous" onClick={removeActive} className="font-medium">À propos de nous</a>
-                    </li>
-                    <hr className="w-3/4"/>
-                    <li>
-                        <a href="/produits" onClick={removeActive} className="font-medium">Nos produits</a>
-                    </li>
-                    <hr className="w-3/4"/>
-                    <li>
-                        <a  href="tel:0673629225" onClick={removeActive} className="font-medium">Contactez-nous</a>
-                    </li>
-                    <hr className="w-3/4"/>
-                </ul>
-            </div>
-        </main>
-    );
+        </ul>
+      </div>
+    </main>
+    </motion.div>    );
     }
     export default Header;
