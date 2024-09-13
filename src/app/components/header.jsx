@@ -61,13 +61,13 @@ const Header = () => {
         <ul className="flex flex-col items-center gap-5 pt-20">
 {
           navBarElement.map((elem,index)=>(
-            <li key={index}>
-              <Link href={elem.href}> {elem.name}</Link>
-
+            <li key={index} className="gap-y-4 w-screen flex flex-col items-center">
+              <Link href={elem.href} className="font-medium "> {elem.name}</Link>
+              <hr className="w-3/4"/>
             </li>
           ))
         }
-                    <hr className="w-3/4"/>
+                    
         </ul>
       </div>
     </main>

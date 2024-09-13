@@ -13,8 +13,10 @@ const Footer = () => {
          }
   }
     return (
-    <motion.div variants={footerVars} initial="hidden" whileInView="visible" viewport={{once:true}}>        <footer className="w-full md:px-20 mt-20 mb-10 flex md:justify-between flex-col md:flex-row gap-4 px-4 h-52">
-      <div className="leading-5 flex flex-col gap-4">
+    <motion.div variants={footerVars} initial="hidden" whileInView="visible" viewport={{once:true}}>       
+    
+     <footer className="w-screen md:px-20 mt-20 mb-10 flex md:justify-between  flex-col md:flex-row gap-4 px-4 h-52">
+      <div className="leading-5 flex flex-col gap-4 justify-start">
         <h1 className="text-3xl font-bold ml-0"><span>&#8226; </span>Visitez-nous</h1>
         <span className="flex gap-2">
           <img src="/assets/location.svg" alt="lacation" />
@@ -26,7 +28,7 @@ const Footer = () => {
           <p> 05 60 31 32 17</p>
         </span>
       </div>
-      <div className=" flex gap-4 md:justify-center items-end justify-start">
+      <div className=" flex gap-4 md:justify-end items-end justify-start">
         <div className="flex gap-4 md:justify-center items-center justify-start">
           <p className="font-semibold">suivez-nous</p>
           <aside className="flex gap-4 md:justify-center items-center justify-start">
