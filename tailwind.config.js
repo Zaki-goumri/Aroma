@@ -19,7 +19,6 @@ module.exports = {
       colors: {
         aroma: "#00A3A8",
         buttons: "#9BCCA3",
-        facebook: "#1877F7",
       },
       
       backgroundImage: {

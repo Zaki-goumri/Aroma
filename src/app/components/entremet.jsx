@@ -40,7 +40,7 @@ Nous pouvons réaliser :<br/>
 </div>
       <Link  href="tel:0560313217" className="bg-white  text-aroma rounded-[50px] w-44 h-16 font-bold mt-6 text-center pt-5">Contactez-nous</Link>
       </aside>
-    <motion.img variants={imageVars} initial="hidden" whileInView="visible" viewport={{once:true,amount:0.4}} src="/patisserie/entremet2.png" alt="entremet" height={400} width={420} className="mb-4 sm:px-4 px-6" />
+    <motion.img variants={imageVars} initial="hidden" whileInView="visible" viewport={{once:true,amount:0.4}} src="/aroma/bg.png" alt="entremet" height={400} width={420} className="mb-4 sm:px-4 px-6" />
   </div >
   );
 }

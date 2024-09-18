@@ -4,12 +4,12 @@ import { delay, motion } from "framer-motion";
 const BestSellers = ()  => {
   
    const  bestSellers = [
-        {path: '/patisserie/croissants.png', title: 'croissants'},
+        {path: '/aroma/croissant.jpg', title: 'croissants'},
         {
-            path: '/patisserie/coeur.png', title: 'coeurs'  
+            path: '/aroma/mousseCoeur.jpg', title: 'coeurs'  
         },
-        {path: '/patisserie/cupCakes.png', title: 'cup cakes'},
-        {path: '/patisserie/mousse.png', title: 'mousse fraise'}
+        {path: '/aroma/orange.jpg', title: 'Orange'},
+        {path: '/aroma/tartecitron.jpg', title: 'Tarte au Citron'}
     ]
   const itemVariant={
     hidden:{
