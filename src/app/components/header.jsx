@@ -35,8 +35,7 @@ const Header = () => {
     return (
     <motion.div variants={navBarVar} initial="hidden" animate="visible">        <main className="w-screen  flex justify-between lg:px-[93px] md:px-8 py-[32px] sm:px-10 xs:px-6 px-4">
       <Link className="flex items-center gap-[9px]" href="/">           
-        <Image src="/assets/logo.svg" height={46} width={47} alt="aroma logo" />
-        <h1 className="font-bold text-xl text-aroma">Aroma Cake </h1>
+        <Image src="/assets/aroma.svg" height={90} width={90} alt="aroma logo" />
       </Link>
       <ul className={`md:flex items-center lg:gap-10 md:gap-5 text-lg font-medium  md:visible hidden`}>
         {
@@ -62,7 +61,7 @@ const Header = () => {
 {
           navBarElement.map((elem,index)=>(
             <li key={index} className="gap-y-4 w-screen flex flex-col items-center">
-              <Link href={elem.href} className="font-medium "> {elem.name}</Link>
+              <Link href={elem.href} className="font-medium" onClick={removeActive}> {elem.name}</Link>
               <hr className="w-3/4"/>
             </li>
           ))

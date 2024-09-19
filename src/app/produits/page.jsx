@@ -1,7 +1,6 @@
 'use client'
 import { easeIn, motion } from "framer-motion";
-import Header from "../components/header";
-import React, { useEffect } from "react";
+import React from "react";
 import Footer from "../components/footer";
 import { listeProduits } from "./components/constantes";
 import Viennoiseries from "./components/viennoiseries";
