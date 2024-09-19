@@ -25,6 +25,7 @@ module.exports = {
         "bg": "url('/assets/bg.svg')",
         "merengue": "url('/patisserie/merengue.png')",
         "macarons": "url('/patisserie/macarons.png')",
+        
         },
        
     },
