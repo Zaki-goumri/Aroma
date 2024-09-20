@@ -2,7 +2,7 @@
 import { easeIn, motion } from "framer-motion";
 import React from "react";
 import Footer from "../components/footer";
-import { listeProduits, viennoiseries,salés,entremets, gateauxOrientaux, patisseries } from "./components/constantes";
+import { listeProduits, viennoiseries,salés,entremets, gateauxOrientaux, patisseries, tartes } from "./components/constantes";
 
 import { useState } from "react";
 import Card from "./components/card";
@@ -140,7 +140,7 @@ export default function Page() {
  ))}  
 </ul> 
 
-<h1 className="text-lg xs:text-xl sm:text-2xl text-white font-bold  "> salés</h1>
+{/* <h1 className="text-lg xs:text-xl sm:text-2xl text-white font-bold  "> salés</h1>
 
 
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-6">  
@@ -154,7 +154,7 @@ export default function Page() {
                 />  
               </li>  
             ))}  
-          </ul>  
+          </ul>   */}
           <h1 className="text-xl xs:text-2xl sm:text-3xl text-white font-bold  "> entremets</h1>
 
 <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-6">  
@@ -201,6 +201,22 @@ export default function Page() {
    </li>  
  ))}  
 </ul>  
+
+<h1 className="text-lg xs:text-xl sm:text-2xl text-white font-bold  "> tartes </h1>
+
+           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-6">  
+ 
+            {tartes.map((product) => (   
+              <li key={product.id}>  
+                <Card  
+                  pic={product.path}  
+                  name={product.name}  
+                  description={product.description}  
+                  price={product.price}  
+                />  
+              </li>  
+            ))}  
+          </ul>  
 
           </div>
   }
@@ -292,6 +308,27 @@ export default function Page() {
            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-6">  
  
             {patisseries.map((product) => (   
+              <li key={product.id}>  
+                <Card  
+                  pic={product.path}  
+                  name={product.name}  
+                  description={product.description}  
+                  price={product.price}  
+                />  
+              </li>  
+            ))}  
+          </ul>  
+          </div>
+            }
+
+{selectedContent === 'tartes' && 
+                          
+                          <div className="flex flex-col items-center mt-7">
+                           <h1 className="text-xl xs:text-2xl sm:text-3xl text-white font-bold  "> {selectedContent}</h1>
+
+           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-6">  
+ 
+            {tartes.map((product) => (   
               <li key={product.id}>  
                 <Card  
                   pic={product.path}  
