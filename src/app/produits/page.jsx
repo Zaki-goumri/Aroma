@@ -2,14 +2,13 @@
 import { easeIn, motion } from "framer-motion";
 import React from "react";
 import Footer from "../components/footer";
-import { listeProduits } from "./components/constantes";
-import Viennoiseries from "./components/viennoiseries";
-import Salés from "./components/sales";
-import Entremets from "./components/entremts";
-import { useState } from "react";
+import { listeProduits, viennoiseries,salés,entremets, gateauxOrientaux, patisseries, tartes } from "./components/constantes";
 
+import { useState } from "react";
+import Card from "./components/card";
 export default function Page() {
-   const buttonVar={
+   
+  const buttonVar={
     hidden:{
       x:"-5vw",
       opacity:0
@@ -91,7 +90,7 @@ export default function Page() {
                  </div>
                 </aside>
                
-                <aside className="bg-aroma lg:w-3/4 w-screen  " >
+                <aside className="bg-aroma lg:w-3/4 w-screen   " >
                 <div className={`md:hidden ${isActive ? "block top-50" : "hidden"}  w-screen  bg-white pb-10 `}>
                         <ul className="flex flex-col items-center gap-5 pt-10 h-max">
                         <button className="font-semibold text-lg hover:text-gray-400" onClick={() => handleButton('toutes les categories')}>toutes les categories</button>
@@ -109,18 +108,242 @@ export default function Page() {
                 </ul>
             </div>
           <motion.div variants={categoriesVar} initial="hidden" animate="visible"> {selectedContent === 'toutes les categories' &&
-            <div >
-              <Viennoiseries />
-              <Salés />
-              <Entremets />
+            
 
-            </div>
-          }
+            <div className="flex flex-col items-center mt-7">
+            <h1 className="text-xl xs:text-2xl sm:text-3xl text-white font-bold  ">{selectedContent}</h1>
 
-            {selectedContent === 'viennoiseries' && <Viennoiseries />}
-            {selectedContent === 'salés' && <Salés />}
-            {selectedContent === 'entremets' && <Entremets />}
-          </motion.div>                </aside>
+            {/* <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-6">  
+            {viennoiseries.concat( entremets,gateauxOrientaux, salés).map((product) => (   
+              <li key={product.id}>  
+                <Card  
+                  pic={product.path}  
+                  name={product.name}  
+                  description={product.description}  
+                  price={product.price}  
+                />  
+              </li>  
+            ))}  
+          </ul>   */}
+            <h1 className="text-xl xs:text-2xl sm:text-3xl text-white font-bold  ">viennoiseries</h1>
+
+<ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-6">  
+ {viennoiseries.map((product) => (   
+   <li key={product.id}>  
+     <Card  
+       pic={product.path}  
+       name={product.name}  
+       description={product.description}  
+       price={product.price}  
+     />  
+   </li>  
+ ))}  
+</ul> 
+
+{/* <h1 className="text-lg xs:text-xl sm:text-2xl text-white font-bold  "> salés</h1>
+
+
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-6">  
+            {salés.map((product) => (   
+              <li key={product.id}>  
+                <Card  
+                  pic={product.path}  
+                  name={product.name}  
+                  description={product.description}  
+                  price={product.price}  
+                />  
+              </li>  
+            ))}  
+          </ul>   */}
+          <h1 className="text-xl xs:text-2xl sm:text-3xl text-white font-bold  "> entremets</h1>
+
+<ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-6">  
+
+ {entremets.map((product) => (   
+   <li key={product.id}>  
+     <Card  
+       pic={product.path}  
+       name={product.name}  
+       description={product.description}  
+       price={product.price}  
+     />  
+   </li>  
+ ))}  
+</ul>  
+
+<h1 className="text-lg xs:text-xl sm:text-2xl text-white font-bold  "> gateaux Orientaux</h1>
+
+<ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-6">  
+
+ {gateauxOrientaux.map((product) => (   
+   <li key={product.id}>  
+     <Card  
+       pic={product.path}  
+       name={product.name}  
+       description={product.description}  
+       price={product.price}  
+     />  
+   </li>  
+ ))}  
+</ul>  
+<h1 className="text-xl xs:text-2xl sm:text-3xl text-white font-bold  "> patisseries</h1>
+
+<ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-6">  
+
+ {patisseries.map((product) => (   
+   <li key={product.id}>  
+     <Card  
+       pic={product.path}  
+       name={product.name}  
+       description={product.description}  
+       price={product.price}  
+     />  
+   </li>  
+ ))}  
+</ul>  
+
+<h1 className="text-lg xs:text-xl sm:text-2xl text-white font-bold  "> tartes </h1>
+
+           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-6">  
+ 
+            {tartes.map((product) => (   
+              <li key={product.id}>  
+                <Card  
+                  pic={product.path}  
+                  name={product.name}  
+                  description={product.description}  
+                  price={product.price}  
+                />  
+              </li>  
+            ))}  
+          </ul>  
+
+          </div>
+  }
+{/* ------------------------------------------------------------- */}
+            {selectedContent === 'viennoiseries' && 
+            <div className="flex flex-col items-center mt-7">
+            <h1 className="text-xl xs:text-2xl sm:text-3xl text-white font-bold  ">{selectedContent}</h1>
+
+           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-6">  
+            {viennoiseries.map((product) => (   
+              <li key={product.id}>  
+                <Card  
+                  pic={product.path}  
+                  name={product.name}  
+                  description={product.description}  
+                  price={product.price}  
+                />  
+              </li>  
+            ))}  
+          </ul>  
+          </div>
+            }
+            {selectedContent === 'salés' && 
+
+<div className="flex flex-col items-center mt-7">
+           <h1 className="text-xl xs:text-2xl sm:text-3xl text-white font-bold  "> {selectedContent}</h1>
+
+
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-6">  
+            {salés.map((product) => (   
+              <li key={product.id}>  
+                <Card  
+                  pic={product.path}  
+                  name={product.name}  
+                  description={product.description}  
+                  price={product.price}  
+                />  
+              </li>  
+            ))}  
+          </ul>  
+          </div>
+            }
+            {selectedContent === 'entremets' && 
+                           <div className="flex flex-col items-center mt-7">
+                           <h1 className="text-xl xs:text-2xl sm:text-3xl text-white font-bold  "> {selectedContent}</h1>
+
+           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-6">  
+ 
+            {entremets.map((product) => (   
+              <li key={product.id}>  
+                <Card  
+                  pic={product.path}  
+                  name={product.name}  
+                  description={product.description}  
+                  price={product.price}  
+                />  
+              </li>  
+            ))}  
+          </ul>  
+          </div>
+            }
+             {selectedContent === 'gateaux orientaux' && 
+                           <div className="flex flex-col items-center mt-7">
+                           <h1 className="text-xl xs:text-2xl sm:text-3xl text-white font-bold  "> {selectedContent}</h1>
+
+           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-6">  
+ 
+            {gateauxOrientaux.map((product) => (   
+              <li key={product.id}>  
+                <Card  
+                  pic={product.path}  
+                  name={product.name}  
+                  description={product.description}  
+                  price={product.price}  
+                />  
+              </li>  
+            ))}  
+          </ul>  
+          </div>
+            }
+
+
+
+             {selectedContent === 'Patisseries' && 
+                          
+                          <div className="flex flex-col items-center mt-7">
+                           <h1 className="text-xl xs:text-2xl sm:text-3xl text-white font-bold  "> {selectedContent}</h1>
+
+           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-6">  
+ 
+            {patisseries.map((product) => (   
+              <li key={product.id}>  
+                <Card  
+                  pic={product.path}  
+                  name={product.name}  
+                  description={product.description}  
+                  price={product.price}  
+                />  
+              </li>  
+            ))}  
+          </ul>  
+          </div>
+            }
+
+{selectedContent === 'tartes' && 
+                          
+                          <div className="flex flex-col items-center mt-7">
+                           <h1 className="text-xl xs:text-2xl sm:text-3xl text-white font-bold  "> {selectedContent}</h1>
+
+           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-6">  
+ 
+            {tartes.map((product) => (   
+              <li key={product.id}>  
+                <Card  
+                  pic={product.path}  
+                  name={product.name}  
+                  description={product.description}  
+                  price={product.price}  
+                />  
+              </li>  
+            ))}  
+          </ul>  
+          </div>
+            }
+         
+         </motion.div>             
+            </aside>
             </div>
             <Footer />
         </main>
