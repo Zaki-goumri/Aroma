@@ -113,18 +113,7 @@ export default function Page() {
             <div className="flex flex-col items-center mt-7">
             <h1 className="text-xl xs:text-2xl sm:text-3xl text-white font-bold  ">{selectedContent}</h1>
 
-            {/* <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-6">  
-            {viennoiseries.concat( entremets,gateauxOrientaux, salés).map((product) => (   
-              <li key={product.id}>  
-                <Card  
-                  pic={product.path}  
-                  name={product.name}  
-                  description={product.description}  
-                  price={product.price}  
-                />  
-              </li>  
-            ))}  
-          </ul>   */}
+           
             <h1 className="text-xl xs:text-2xl sm:text-3xl text-white font-bold  ">viennoiseries</h1>
 
 <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-6">  
@@ -140,21 +129,7 @@ export default function Page() {
  ))}  
 </ul> 
 
-{/* <h1 className="text-lg xs:text-xl sm:text-2xl text-white font-bold  "> salés</h1>
 
-
-          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-6">  
-            {salés.map((product) => (   
-              <li key={product.id}>  
-                <Card  
-                  pic={product.path}  
-                  name={product.name}  
-                  description={product.description}  
-                  price={product.price}  
-                />  
-              </li>  
-            ))}  
-          </ul>   */}
           <h1 className="text-xl xs:text-2xl sm:text-3xl text-white font-bold  "> entremets</h1>
 
 <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-6">  
@@ -207,6 +182,23 @@ export default function Page() {
            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-6">  
  
             {tartes.map((product) => (   
+              <li key={product.id}>  
+                <Card  
+                  pic={product.path}  
+                  name={product.name}  
+                  description={product.description}  
+                  price={product.price}  
+                />  
+              </li>  
+            ))}  
+          </ul>  
+
+
+          <h1 className="text-lg xs:text-xl sm:text-2xl text-white font-bold  "> salés</h1>
+
+
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-6">  
+            {salés.map((product) => (   
               <li key={product.id}>  
                 <Card  
                   pic={product.path}  

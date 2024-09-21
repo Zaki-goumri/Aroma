@@ -15,11 +15,11 @@ export const viennoiseries = [
 ];
 
 export const entremets = [
-{path:'/aroma/coeurEntremet.jpg',name:'entremet',description:'entremet sur commande ',price:4000,id:3} ,
-{path:'/aroma/demiPlateauBichou.jpg',name:'Grand plateau',description:'entremet sur commande ',price:4000,id:4} ,
-{path:'/aroma/layercakeSonic.jpg',name:'entremet',description:'layer Cake sur commande  ',price:3000,id:5} ,
-{path:'/aroma/layercakeSpongbob.jpg',name:'entremet',description:'layer Cake sur commande  ',price:4000,id:6} ,
-{path:'/aroma/piecemontee.jpg',name:'piece montee ',description:' sur commande  ',price:5000,id:7} ,
+    {path:'/aroma/coeurEntremet.jpg',name:'entremet',description:'entremet sur commande ',price:4000,id:3} ,
+    {path:'/aroma/demiPlateauBichou.jpg',name:'Grand plateau',description:'entremet sur commande ',price:4000,id:4} ,
+    {path:'/aroma/layercakeSonic.jpg',name:'entremet',description:'layer Cake sur commande  ',price:3000,id:5} ,
+    {path:'/aroma/layercakeSpongbob.jpg',name:'entremet',description:'layer Cake sur commande  ',price:4000,id:6} ,
+    {path:'/aroma/piecemontee.jpg',name:'piece montee ',description:' sur commande  ',price:5000,id:7} ,
 ]
 
 export const salés = [
@@ -38,14 +38,14 @@ export const gateauxOrientaux = [
 
 export const patisseries = [
     {path:"/aroma/cheesecakeBoite.jpg",name:"cheesecake",description:"",price:300,id:12},
-    {path:"/aroma/mousseChocolat.jpg",name:"Chocolat",description:"cheesecake",price:250,id:13},
-    {path:"/aroma/mousseChocolat2.jpg",name:"mousse chocolat",description:"cheesecake",price:2,id:14},
-    {path:"/aroma/moussecoeur.jpg",name:"mousse coeur",description:"cheesecake",price:300,id:15},
-    {path:"/aroma/orange.jpg",name:"orange",description:"cheesecake",price:300,id:16},
-    {path:"/aroma/mousseCitron.jpg",name:"mousse citron",description:"cheesecake",price:300,id:17},
-    {path:"/aroma/genoisecaramel.jpg",name:"cheesecake lotus",description:"cheesecake",price:350,id:18},
+    {path:"/aroma/mousseChocolat.jpg",name:"Chocolat",description:"mousse chocolat et brownie",price:250,id:13},
+    {path:"/aroma/mousseChocolat2.jpg",name:"mousse chocolat",description:"",price:250,id:14},
+    {path:"/aroma/moussecoeur.jpg",name:"mousse coeur",description:"mousse chocolat blanc ",price:300,id:15},
+    {path:"/aroma/orange.jpg",name:"orange",description:"mousse chocolat blanc",price:300,id:16},
+    {path:"/aroma/mousseCitron.jpg",name:"mousse citron",description:"mousse citron",price:300,id:17},
+    {path:"/aroma/genoisecaramel.jpg",name:"cheesecake lotus",description:"cheesecake lotus ",price:350,id:18},
 ]
 
 export const tartes = [
-    {path:"/aroma/tartecitron.jpg",name:"tarte citron",description:"",price:450,id:19},
+    {path:"/aroma/tartecitron.jpg",name:"tarte citron",description:"tarte au citron",price:450,id:19},
 ]
