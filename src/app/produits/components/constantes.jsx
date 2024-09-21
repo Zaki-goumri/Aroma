@@ -27,13 +27,13 @@ export const salés = [
 ]
 
 export const gateauxOrientaux = [
-    {path:"/aroma/dziryat.jpg",name:"dzeryat",description:"chebakia",price:170,id:5},
-    {path:"/aroma/gateauoriental.jpg",name:"chebakia",description:"chebakia",price:180,id:6},
-    {path:"/aroma/gateauoriental2.jpg",name:"mchekla",description:"chebakia",price:180,id:7},
-    {path:"/aroma/mchekla.jpg",name:"mchekla",description:"chebakia",price:180,id:8},
-    {path:"/aroma/mchekla2.jpg",name:"chebakia",description:"chebakia",price:190,id:9},
-    {path:"/aroma/tcharak3riane.jpg",name:"charak ariane",description:"chebakia",price:140,id:10},
-    {path:"/aroma/tcharakmsaker.jpg",name:"charak msaker",description:"chebakia",price:160,id:11},
+    {path:"/aroma/dziryat.jpg",name:"dzeryat",description:"aux amande ",price:170,id:5},
+    {path:"/aroma/gateauoriental.jpg",name:"chebakia",description:"aux amande",price:180,id:6},
+    {path:"/aroma/gateauoriental2.jpg",name:"mchekla",description:"aux amande",price:180,id:7},
+    {path:"/aroma/mchekla.jpg",name:"mchekla",description:"aux amande",price:180,id:8},
+    {path:"/aroma/mchekla2.jpg",name:"chebakia",description:"aux amande",price:190,id:9},
+    {path:"/aroma/tcharak3riane.jpg",name:"charak ariane",description:"aux amande",price:140,id:10},
+    {path:"/aroma/tcharakmsaker.jpg",name:"charak msaker",description:"aux amande",price:160,id:11},
 ]
 
 export const patisseries = [
