@@ -20,7 +20,8 @@ const Footer = () => {
         <h1 className="text-3xl font-bold ml-0"><span>&#8226; </span>Visitez-nous</h1>
         <span className="flex gap-2">
           <img src="/assets/location.svg" alt="lacation" />
-          <p> Residence Ysrf ,coopérative, Boumerdes</p>
+          <p> boulvard des martyrs,Residence Ysref,Boumerdes
+          </p>
         </span>
         <span className="flex gap-2">
           <img src="/assets/phone.svg" alt="phone number" />
