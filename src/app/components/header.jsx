@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from 'react'
 import { easeIn, motion } from "framer-motion";
 const Header = () => {
-    const navBarElement=[{name:"Acceuil ",href:"/"},{name:"À propos de nous",href:"/a_propos_nous"},{name:"Nos produits",href:"/produits"},{name:"Contactez-nous",href:"tel:024943317"}]
+    const navBarElement=[{name:"Acceuil ",href:"/"},{name:"À propos de nous",href:"/a_propos_nous"},{name:"Nos produits",href:"/produits"}]
 
     const [isActive, setIsActive] = useState(false);
     
@@ -37,7 +37,7 @@ const Header = () => {
       <Link className="flex items-center gap-[9px]" href="/">           
         <Image src="/assets/aroma.svg" height={90} width={90} alt="aroma logo" />
       </Link>
-      <ul className={`md:flex items-center lg:gap-10 md:gap-5 text-lg font-medium  md:visible hidden`}>
+      <ul className={`md:flex items-center lg:gap-10 md:gap-5  text-lg font-medium  md:visible hidden`}>
         {
           navBarElement.map((elem,index)=>(
             <li key={index} className="hover:scale-105">
@@ -46,6 +46,7 @@ const Header = () => {
             </li>
           ))
         }
+          <a href="tel:024943317" >Contactez-nous</a>
               </ul>
       <button onClick={toggleActiveClass} className="md:hidden ">
         {isActive ? (
@@ -66,7 +67,8 @@ const Header = () => {
             </li>
           ))
         }
-                    
+          <a href="tel:024943317" className="font-medium" >Contactez-nous</a>    
+             <hr className="w-3/4"/>
         </ul>
       </div>
     </main>
