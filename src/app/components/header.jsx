@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from 'react'
 import { easeIn, motion } from "framer-motion";
 const Header = () => {
-    const navBarElement=[{name:"Acceuil ",href:"/"},{name:"À propos de nous",href:"/a_propos_nous"},{name:"Nos produits",href:"/produits"},{name:"Contactez-nous",href:"tel:0560313217"}]
+    const navBarElement=[{name:"Acceuil ",href:"/"},{name:"À propos de nous",href:"/a_propos_nous"},{name:"Nos produits",href:"/produits"},{name:"Contactez-nous",href:"tel:024943317"}]
 
     const [isActive, setIsActive] = useState(false);
     

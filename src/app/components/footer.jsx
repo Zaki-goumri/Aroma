@@ -25,7 +25,7 @@ const Footer = () => {
         <span className="flex gap-2">
           <img src="/assets/phone.svg" alt="phone number" />
 
-          <p> 05 60 31 32 17</p>
+          <p> 024 943 317</p>
         </span>
       </div>
       <div className=" flex gap-4 md:justify-end items-end justify-start">
