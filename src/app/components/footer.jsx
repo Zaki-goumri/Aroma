@@ -32,15 +32,15 @@ const Footer = () => {
         <div className="flex gap-4 md:justify-center items-center justify-start">
           <p className="font-semibold">suivez-nous</p>
           <aside className="flex gap-4 md:justify-center items-center justify-start">
-            <Link href="https://web.facebook.com/patisserie.aroma.35?mibextid=zbwkwl&_rdc=1&_rdr" target="_blank" >
+            <a href="https://web.facebook.com/patisserie.aroma.35?mibextid=zbwkwl&_rdc=1&_rdr" target="_blank" >
               <img src="/assets/facebook.svg" alt="facebook"  className="bg-aroma rounded-full w-[35px]  sm:w-[40px]   xs:w-[37px] md:w-[45px]" />
-            </Link>
-            <Link href="https://www.instagram.com/patisserie_aroma" target="_blank">
+            </a>
+            <a href="https://www.instagram.com/patisserie_aroma" target="_blank">
               <img src="/assets/insta.svg" alt="instagram"  className="bg-aroma rounded-full w-[35px]   sm:w-[40px] xs:w-[37px] md:w-[45px] " />
-            </Link>
-            <Link href="https://www.tiktok.com/@patisserie_aroma" target="_blank">
+            </a>
+            <a href="https://www.tiktok.com/@patisserie_aroma" target="_blank">
               <img src="/assets/tiktok.svg" alt="tiktok"  className="bg-aroma rounded-full w-[35px]  sm:w-[40px]  xs:w-[37px] md:w-[45px]" />
-            </Link>
+            </a>
           </aside>
         </div>
       </div>
