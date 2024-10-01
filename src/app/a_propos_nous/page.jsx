@@ -10,7 +10,6 @@ const Home = () => {
             <About />
             <Mission />
             <More />
-            <Footer/>
         </main>
     )   
 }
