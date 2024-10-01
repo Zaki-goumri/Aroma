@@ -110,7 +110,7 @@ export default function Page() {
 
                     <div className="flex  visible lg:hidden ml-3">
                   
-                    <button onClick={toggleActiveClass} className="">
+                    <button onClick={toggleActiveClass} >
                     {isActive ? (
                        <img src="/assets/hambrgerClose.svg" className="w-8 h-8 "alt="menu is close"/>
                         ) : (
@@ -140,13 +140,13 @@ export default function Page() {
                 <div className={`lg:hidden ${isActive ? "block top-50" : "hidden"}  w-screen  bg-white pb-10 `}>
                         <ul className="flex flex-col items-center gap-5 pt-10 h-max">
                         <button  className="font-semibold text-lg hover:text-gray-400" onClick={() => handleButton({category:'Tout les catégories',collect:'tout les categories'})}>Tout les catégories</button>
-                         <hr className="w-3/4"/>
+                         
     
                 {
                         listeProduits.map((produit, index) => (
                            <li key={index}>
                             <button  className="font-semibold text-lg hover:text-gray-400" onClick={() => handleButton(produit)}>{produit.category}</button>
-                            <hr className="w-3/4"/>
+                       
 
                             </li>
                     
