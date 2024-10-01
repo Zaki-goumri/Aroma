@@ -6,7 +6,7 @@ import { listeProduits } from "./components/constantes";
 import { useState } from "react";
 import Card from "./components/card";
 import {db} from '../../config/firebase';
-import { collection, getDocs,listCollections } from 'firebase/firestore';
+import { collection, getDocs } from 'firebase/firestore';
 
  
 
