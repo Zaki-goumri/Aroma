@@ -8,7 +8,6 @@ import Link from "next/link";
 import { easeIn,motion } from "framer-motion";
 
 export default function Home() {
-  
  
  const heroVar={
     hidden:{
