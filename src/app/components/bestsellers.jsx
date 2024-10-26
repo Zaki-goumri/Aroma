@@ -6,10 +6,11 @@ const BestSellers = ()  => {
    const  bestSellers = [
         {path: '/aroma/croissant.jpg', title: 'croissants'},
         {
-            path: '/aroma/mousseCoeur.jpg', title: 'coeurs'  
+         path: '/aroma/mousseCoeur.jpg', title: 'coeurs'  
         },
         {path: '/aroma/orange.jpg', title: 'Orange'},
-        {path: '/aroma/tartecitron.jpg', title: 'Tarte au Citron'}
+
+        {path: '/aroma/tarteCitron.jpg', title: 'Tarte au Citron'}
     ]
   const itemVariant={
     hidden:{
